@@ -1,5 +1,6 @@
 
-source colors.sh
+
+source "$(dirname ${BASH_SOURCE[0]})"/colors.sh
 
 JAVA_PROJECTS_ROOT=${HOME}/dev/java
 
