@@ -6,8 +6,9 @@ JAVA_PROJECTS_ROOT=${HOME}/dev/java
 
 _java_projects() {
     local cur=${COMP_WORDS[COMP_CWORD]}
-    local files=(${JAVA_PROJECTS_ROOT}/*)
-    COMPREPLY=( $(compgen -W "${FILES[*]##*/}" -- "$cur") )
+    local files=( ${JAVA_PROJECTS_ROOT}/* )
+
+    COMPREPLY=( $(compgen -W "${files[*]##*/}" -- "$cur") )
 }
 
 gobuild() {
